@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ShipmentDate>2017-12-01</ShipmentDate>
+<ShipmentUnitIndex>9</ShipmentUnitIndex>
+<ShipmentUnitQuantity>15</ShipmentUnitQuantity>
+<OrderDate>2017-12-01</OrderDate>
+<InvoiceNumber>78016697</InvoiceNumber>
+<PurchaseOrderReference>13364A</PurchaseOrderReference>
+<ShipFrom>
+<Name>SanMar CORP</Name>
+    <Address>
+        <Line1>30500 SE 79TH ST</Line1>
+        <CityName>ISSAQUAH</CityName>
+        <StateCode>WA</StateCode>
+        <PostalCode>98027</PostalCode>
+        <CountryCode>US</CountryCode>
+        <IsResidential>true</IsResidential>
+    </Address>
+</ShipFrom>
+<ShipTo>
+    <Name>CORPORATE OFFICES </Name>
+    <Address>
+        <Line1>3863 S VALLEY VIEW </Line1>
+        <CityName>LAS VEGAS</CityName>
+        <StateCode>NV</StateCode>
+        <PostalCode>89103</PostalCode>
+        <CountryCode>US</CountryCode>
+        <IsResidential>true</IsResidential>
+    </Address>
+</ShipTo>
+<BillTo>
+    <Name>CORPORATE OFFICES</Name>
+    <Address>
+        <Line1>230 BETHWICK RD</Line1>
+        <CityName>LAS VEGAS</CityName>
+        <StateCode>NV</StateCode>
+        <PostalCode>89183</PostalCode>
+        <CountryCode>US</CountryCode>
+        <IsResidential>true</IsResidential>
+    </Address>
+</BillTo>
+<Weight uom="lb">30</Weight>
+<Carrier>
+    <Name>UPS</Name>
+    <ShippingMethod>GROUND</ShippingMethod>
+    <TrackingId>1Z1234567891234</TrackingId>
+</Carrier>
+</Header><Body>
+<Item id="1">
+    <SkuId>451715</SkuId>
+    <StyleNo>PC90</StyleNo>
+    <Description>PC ESS FLEECE SWTSH DK CHOC BN</Description>
+    <Color>Dk Choc Brown</Color>
+    <Size>XL</Size>
+    <Quantity>350</Quantity>
+    <GTIN>00123456789012</GTIN>
+</Item>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <title>React App</title>
+    <!-- <script>
+      var barcode = ""
+var interval 
+document.addEventListener('keydown',function(e){
+    if (interval){
+        clearInterval(interval)
+    }
+    if(e.code =="Enter"){
+        if (barcode)
+            handleBarcode(barcode)
+        barcode=""
+        return
+        
+    }
+    if(e.key != "Shift")
+        barcode += e.key
+    interval = setInterval(()=> barcode="",20)
+})
+function handleBarcode(scanned_barcode){
+    document.querySelector('#last-barcode').innerHTML= scanned_barcode
+
+}
+    </script> -->
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <p>Your barcode:</p>
+    <div id= "last-barcode"></div>
+    <div id="root"></div>
+    <p>here is the info:<span id= 's'></span></p>
+    <script src="j.js"></script>
+  </body>
+</html>
