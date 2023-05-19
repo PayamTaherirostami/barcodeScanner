@@ -1,49 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  
+<title>teact App</title>
+<head>
+  <title>SOAP JavaScript Client Test</title>
+  <!-- <script type="text/javascript">
+      function soap() {
+          var xmlhttp = new XMLHttpRequest();
+          xmlhttp.open('POST', 'http://schemas.xmlsoap.org/soap/envelope/', true);
 
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+     
+          var sr =
+          '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" ' + 
+          'xmlns:pac="http://ws.sanmar.com/webservices/PackingSlip">' +
+          '<soapenv:Header/>' +
+          '<soapenv:Body>' +
+          '<pac:GetPackingSlip>' +
+          '<pac:wsVersion>1.0.0</pac:wsVersion>' +
+          '<pac:UserId>"jetcityproducts"</pac:UserId>' +
+          '<pac:Password>"Annaalisa1"</pac:Password>' +
+          '<pac:PackingSlipId>LP0063137305</pac:PackingSlipId>';
 
-    <title>React App</title>
-    <!-- <script>
-      var barcode = ""
-var interval 
-document.addEventListener('keydown',function(e){
-    if (interval){
-        clearInterval(interval)
-    }
-    if(e.code =="Enter"){
-        if (barcode)
-            handleBarcode(barcode)
-        barcode=""
-        return
-        
-    }
-    if(e.key != "Shift")
-        barcode += e.key
-    interval = setInterval(()=> barcode="",20)
-})
-function handleBarcode(scanned_barcode){
-    document.querySelector('#last-barcode').innerHTML= scanned_barcode
+          xmlhttp.onreadystatechange = function () {
+              if (xmlhttp.readyState == 4) {
+                  if (xmlhttp.status == 200) {
+                      alert(xmlhttp.responseText);
+                    
+                  }
+              }
+          }
 
-}
-    </script> -->
+          xmlhttp.setRequestHeader('Content-Type', 'text/xml');
+          xmlhttp.send(sr);
+
+      }
+  </script> -->
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <p>Your barcode:</p>
     <div id= "last-barcode"></div>
     <div id="root"></div>
-    <p>here is the info:<span id= 's'></span></p>
+    <p>here is the info:
+        <span id= 'dis'></span> 
+        <!-- <div id="color"></div>
+        <div id="qnt"></div>
+        <div id="size"></div> -->
+        
+  
+    
+    
+    
+    
+    </p>
+<!-- 
+    <form name="Demo" action="" method="post">
+      <div>
+          <input type="button" value="Soap" onclick="soap();" />
+      </div>
+  </form> -->
     <script src="j.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded',() =>{
+            let url = "./test.xml"
+            fetch (url)
+            .then(response => response.text())
+            .then (data=>{
+                // console.log(data)
+                let parser = new DOMParser();
+                let xml = parser.parseFromString(data,"application/xml");
+                console.log(xml)
+                buildList(xml)
+                // document.querySelector("#s").textContent =  data
+
+                })
+        })  
+        function buildList(x){
+            let list = document.querySelector('#dis')
+
+            let descriptions = x.getElementsByTagName('Description')
+            let colors = x.getElementsByTagName('Color')
+            let qnts = x.getElementsByTagName('Quantity')
+            let sizes = x.getElementsByTagName('Size')
+
+            for (let i = 0; i<descriptions.length; i++){
+                let li = document.createElement('p');
+                let Description= descriptions[i].firstChild.nodeValue;
+                li.textContent= Description;
+                let color= colors[i].firstChild.nodeValue;
+                let qnt= qnts[i].firstChild.nodeValue;
+                li.textContent= qnt;
+                let size= sizes[i].firstChild.nodeValue;
+                li.textContent= size;
+                li.textContent= Description +
+                 " , Color: "+ color +
+                ", Size: " + size +
+                 ", Quantity: "+ qnt 
+                list.append(li)
+            }
+
+        }
+    </script>
+
   </body>
 </html>

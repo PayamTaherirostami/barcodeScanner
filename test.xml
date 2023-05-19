@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<root>
 <ShipmentDate>2017-12-01</ShipmentDate>
 <ShipmentUnitIndex>9</ShipmentUnitIndex>
 <ShipmentUnitQuantity>15</ShipmentUnitQuantity>
@@ -44,8 +45,7 @@
     <ShippingMethod>GROUND</ShippingMethod>
     <TrackingId>1Z1234567891234</TrackingId>
 </Carrier>
-</Header><Body>
-<Item id="1">
+<Item id="1"> hi
     <SkuId>451715</SkuId>
     <StyleNo>PC90</StyleNo>
     <Description>PC ESS FLEECE SWTSH DK CHOC BN</Description>
@@ -54,3 +54,13 @@
     <Quantity>350</Quantity>
     <GTIN>00123456789012</GTIN>
 </Item>
+<Item id="2"> hi
+    <SkuId>451716</SkuId>
+    <StyleNo>PC91</StyleNo>
+    <Description>PC ESS FLEECE SWTSH</Description>
+    <Color>Red</Color>
+    <Size>2XL</Size>
+    <Quantity>35</Quantity>
+    <GTIN>00123456789552</GTIN>
+</Item>
+</root>
